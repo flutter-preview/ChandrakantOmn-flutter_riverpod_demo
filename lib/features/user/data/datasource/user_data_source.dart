@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod_demo/features/user/data/datasource/user_dto.dart';
 
-import '../model/User.dart';
+import '../model/user.dart';
 
 abstract class UserDatasource {
   Future<List<User>> getUsersList();

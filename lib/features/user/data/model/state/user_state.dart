@@ -1,7 +1,7 @@
 
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../User.dart';
+import '../user.dart';
 part 'user_state.freezed.dart';
 @freezed
 class UserState with _$UserState {

@@ -2,7 +2,7 @@
 
 import 'package:floor/floor.dart';
 
-import '../model/User.dart';
+import '../model/user.dart';
 
 @dao
 abstract class UserDao {

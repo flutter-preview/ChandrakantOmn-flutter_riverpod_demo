@@ -2,7 +2,7 @@
 
 
 import '../../domain/user_repository.dart';
-import '../model/User.dart';
+import '../model/user.dart';
 import '../datasource/user_data_source.dart';
 
 class UserRepositoryImp implements UserRepository{

@@ -1,20 +1,17 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_riverpod_demo/core/constants/app_theme.dart';
 
-import '../data/model/User.dart';
+import '../data/model/user.dart';
 import '../data/model/state/user_state.dart';
 import '../provider/provider.dart';
 
+// ignore: must_be_immutable
 class UserPage extends ConsumerWidget {
-   UserPage({super.key});
-   late int id= 0;
+   const UserPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(userNotifierProvider);
-    print(state);
      return Scaffold(appBar: AppBar(title: Text('title'.tr())), body: _buildBody(state));
   }
 
@@ -26,7 +23,7 @@ class UserPage extends ConsumerWidget {
     } else if (state.error != null) {
       return HomePageError(message: state.error ?? "");
     } else {
-      return HomePageInitial();
+      return const HomePageInitial();
     }
   }
 }
@@ -67,7 +64,7 @@ class HomePageError extends StatelessWidget {
 
 class HomePageInitial extends ConsumerWidget {
 
-  HomePageInitial({super.key});
+  const HomePageInitial({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -76,9 +73,7 @@ class HomePageInitial extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
-            onPressed: () {
-              print("Fetch dadta");
-              ref.read(userNotifierProvider.notifier).getUserInfo("10");
+            onPressed: () {ref.read(userNotifierProvider.notifier).getUserInfo("10");
             },
             child: const Text('Get user info'),
           ),
@@ -113,7 +108,6 @@ class HomePageLoaded extends ConsumerWidget {
             const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
-                print("Fetch dadta");
                 ref.read(userNotifierProvider.notifier).getUserInfo("10");
               },
               child: const Text('Get user info'),
@@ -139,7 +133,7 @@ class HomePageLoading extends StatelessWidget {
 class StyledText extends StatelessWidget {
   final String text;
 
-  StyledText(this.text, {super.key});
+  const StyledText(this.text, {super.key});
 
   @override
   Widget build(BuildContext context) {

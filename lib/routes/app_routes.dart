@@ -5,6 +5,6 @@ import 'package:flutter_riverpod_demo/routes/routes.dart';
 class AppRoutes {
   static final routes = {
     Routes.home: (context) => const HomePage(),
-    Routes.user: (context) =>  UserPage(),
+    Routes.user: (context) =>  const UserPage(),
   };
 }

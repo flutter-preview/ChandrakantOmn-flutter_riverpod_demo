@@ -2,7 +2,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_demo/features/home/data/models/joke_state.dart';
 import 'package:flutter_riverpod_demo/features/home/data/repository/home_repository.dart';
 
-import '../data/models/joke_state.dart';
 
 class JokeDataNotifier extends StateNotifier<JokeState> {
   JokeDataNotifier(this.homeRepository) : super(JokeState()) {
