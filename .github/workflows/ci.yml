@@ -51,3 +51,12 @@ jobs:
       - run: flutter pub get
       - run: flutter clean
       - run: flutter build appbundle
+
+      - name: Copy App Bundle
+        run: mv build/app/outputs/bundle/release/app-release.aab ${{ github.workspace }}/app-release.aab
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+            name: app-bundle
+            path: ${{ github.workspace }}/app-release.aab
