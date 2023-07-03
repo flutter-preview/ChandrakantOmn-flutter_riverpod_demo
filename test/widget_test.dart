@@ -9,7 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('smoke test 1', (WidgetTester tester) async {
     // Build our app and trigger a frame.
   /*  await tester.pumpWidget(const MyApp());
 
@@ -26,5 +26,8 @@ void main() {
     expect(find.text('1'), findsOneWidget);*/
 
     expect(1, 1);
+  });
+  testWidgets('smoke test 2', (WidgetTester tester) async {
+    expect(2, 2);
   });
 }
