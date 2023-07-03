@@ -30,4 +30,8 @@ void main() {
   testWidgets('smoke test 2', (WidgetTester tester) async {
     expect(2, 2);
   });
+
+  testWidgets('smoke test 3', (WidgetTester tester) async {
+    expect(3, 3);
+  });
 }
